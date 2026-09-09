@@ -1,0 +1,10 @@
+nota1 = float(input("Digite a nota do primeiro bimestre: "))
+nota2 = float(input("Digite a nota do segundo bimestre: "))
+nota3 = float(input("Digite a nota do terceiro bimestre: "))
+nota4 = float(input("Digite a nota do quarto bimestre: "))
+
+print("______NOTAS_____")
+print("Primeiro bimestre: ", nota1)
+print("Segundo bimestre: ", nota2)
+print("Terceiro bimestre: ", nota3)
+print("Quarto bimestre: ", nota4)

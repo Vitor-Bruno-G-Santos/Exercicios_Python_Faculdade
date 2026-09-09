@@ -1,0 +1,12 @@
+nome = input("Digite o seu nome: ")
+idade = int(input("Digite sua idade: "))
+sexo = input("Digite o seu sexo: ")
+endereco = input("Digite o seu endereço: ")
+telefone = input("Digite o seu telefone: ")
+
+print("______________CADASTRO_____________")
+print("Nome:", nome)
+print("Idade:", idade)
+print("Sexo:", sexo)
+print("Endereco:", endereco)
+print("Telefone:", telefone)
