@@ -1,6 +1,6 @@
 while True:
     try:
-        SANDUICHES = {
+        PRODUTOS = {
             100: {
                 "nome": "Cachorro Quente",
                 "preco": 11.2
@@ -16,9 +16,7 @@ while True:
             103: {
                 "nome": "Hamburguer",
                 "preco": 16.2
-            }
-        }
-        BEBIDAS = {
+            },
             201: {
                 "nome": "Refrigerante",
                 "preco": 6
@@ -32,18 +30,18 @@ while True:
                 "preco": 4.7
             }
         }
-        for codigo ,sanduiche in SANDUICHES.items():
+        for codigo ,sanduiche in PRODUTOS.items():
             print(f"Codigo: {codigo} | {sanduiche["nome"]} - R$ {sanduiche['preco']:.2f}")
-        
-        for codigo ,bebida in BEBIDAS.items():
-            print(f"Codigo: {codigo} | {bebida["nome"]} - R$ {bebida['preco']:.2f}")
-
-        codigo_sanduiche = int(input("Informe o código do sanduíche: "))
-        codigo_bebida = int(input("Informe o código da bebida: "))
-
-        total = SANDUICHES[codigo_sanduiche]["preco"] + BEBIDAS[codigo_bebida]["preco"]
+        pedido = []
+        codigo_produto = 1
+        while codigo_produto != 0:
+            codigo_produto = int(input("Informe o código do produto desejado (0 Para sair): "))
+            if codigo_produto != 0: pedido.append(codigo_produto)
+        total = 0
+        for item in pedido:
+            total += PRODUTOS[item]["preco"]
 
         print(f"Valor a pagar: R$ {total:.2f}")
-        break
+        break;
     except:
-        print("Codigo do sanduiche ou bebida não encontrado")
+        print("Produto digitado invalido")
